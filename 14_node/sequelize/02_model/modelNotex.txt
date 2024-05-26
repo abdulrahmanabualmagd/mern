@@ -1,0 +1,59 @@
+Models can be defined in two equivalent ways in Sequelize:\
+
+    1- Calling sequelize.define(modelName, attributes, options)
+
+        const ModelName = sequelize.define(
+            'ModelName',
+            //column definitions
+            columnName1:{
+                type: DataTypes.STRING,
+                allowNull: false,
+                unique: true, 
+                defaultValue: 'default value',
+                // other options
+            },
+            columnName2: {
+                // ...
+            },
+            {
+                // Model Options
+                tableName: 'custom_table_name',
+            }
+        )
+
+    2- Extending Model and calling init(attributes, options)
+
+        // Extend sequelize Model class
+        class User extend Model{
+        }
+
+        Initialize the Model columns, attributes, and options
+        User.init(
+        {
+            firstName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            },
+            lastName: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            },
+        },
+        {
+            sequelize,        // Pass the Sequelize instance
+            modelName: 'User', // Name of the model
+            tableName: 'users', // Custom table name if different from model name
+            timestamps: true,  // Enable timestamps
+        }
+        );
+
+
+sequelize.sync()
+    // Update database and synchronize the defined table with the configured database
+
+sequelize.drop({match: /_test$/});
+    // Drop tables starts with '_test....'
+
+### NOTE:   Sequelize, [inflection] refers to the automatic conversion of model names into table names and vice versa. By default, 
+            Sequelize uses a simple inflection rule to convert between singular and plural forms.
+            We can disable it by setting a [custom table name] or activate [freezeTableName] option

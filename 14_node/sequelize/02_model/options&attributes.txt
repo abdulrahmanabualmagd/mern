@@ -1,0 +1,49 @@
+[Column Attributes]
+
+    01. [type]              : Specifies the data type of the column.
+    02. [allowNull]         : Indicates whether the column can be NULL.
+    03. [defaultValue]      : Sets a default value for the column if no value is provided during insertion.
+    04. [primaryKey]        : Marks the column as the primary key of the table.
+    05. [autoIncrement]     : Specifies whether the column should automatically increment its value for each new row.
+    06. [unique]            : Ensures that all values in the column are unique across the table.
+    07. [validate]          : Provides validation rules for the column's values.
+    08. [references]        : Establishes a foreign key relationship with another table.
+    09. [referencesKey]     : Specifies the referenced key column in the related table.
+    10. [onDelete]          : Specifies the action to take when the referenced row in the foreign key relationship is deleted.
+    11. [onUpdate]          : Specifies the action to take when the referenced row in the foreign key relationship is updated.
+    12. [get]               : Custom getter function for the column's value.
+    13. [set]               : Custom setter function for the column's value.
+
+
+[Sequelize Options]
+
+    1. [timestamps]         : false          // don't add the updatedAt and createdAt attributes
+    2. [freezeTableName]    : true           // Disable the modification of table names
+    3. [tablename]          : 'Custom-Name'  // Define the tables's name
+    4. [version]            : true           // Sequelize adds a version count attribute to the model and throws an OptimisticLockingError when state instances are saved
+    5. [paranoid]           : true           // Don't delete database entries but set the attribute deletedAt to when the deletion was done. Only works if timestamps are enabled
+
+
+[validate]
+
+    01. [is]                : (value) => { /* custom validation function */ },
+    02. [isEmail]           : true,
+    03. [isUrl]             : true,
+    04. [isIP]              : true,
+    05. [isAlphanumeric]    : true,
+    06. [isNumeric]         : true,
+    07. [isInt]             : true,
+    08. [isFloat]           : true,
+    09. [isIn]              : [['value1', 'value2', 'value3']],
+    10. [isLowercase]       : true,
+    11. [isUppercase]       : true,
+    12. [notNull]           : true,
+    13. [notEmpty]          : true,
+    14. [len]               : [2, 10],          // Length must be between 2 and 10 characters
+    15. [min]               : 0,                // Value must be at least 0
+    16. [max]               : 100,              // Value must be at most 100
+    17. [isDate]            : true,
+    18. [isBefore]          : "2025-01-01",     // Date must be before January 1, 2025
+    19. [isAfter]           : "2023-01-01"      // Date must be after January 1, 2023
+
+
