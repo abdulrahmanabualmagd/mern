@@ -7,8 +7,6 @@ User    => Represents an individual user in the system
     - lastName: User's last name
     - phone: user phone number
     - address: user address
-    - createdAt: Timestamp of account creation
-    - updatedAt: Timestamp of last account update
     - lastLogin: Timestamp of last login
     - status: Account status (e.g., active, suspended)
     - salt: for password hashing
@@ -26,16 +24,6 @@ Permission  => Represents a specific action or set of actinos that can be perfor
     - id: Unique identifier
     - name: Name of the permission (e.g., read:user, write:post)
     - description: Description of the permission
-
-Session => Tracks active sessions for users, particularly useful for maintaining user state in stateless architectures using tokens (JWT)
-    - id: Unique identifier
-    - token: JWT or session token
-    - createdAt: Timestamp of session creation
-    - expiresAt: Timestamp of session expiration
-    - ipAddress: IP address of the user's device
-    - userAgent: User agent string of the user's device
-
-    - userId(FK): Reference to the User entity
 
 PasswordResetToken  => Facilitates the password reset process by providing a secure token that can be sent to the user's email
     - id: Unique identifier
@@ -98,14 +86,13 @@ Relationships
 
 sequelize-cli
 
-npx sequelize-cli model:generate --name User --attributes id:UUID,username:string,email:string,passwordHash:string,firstName:string,lastName:string,phone:string,address:string,createdAt:date,updatedAt:date,lastLogin:date,status:string,salt:string
-npx sequelize-cli model:generate --name Role --attributes id:UUID,name:string,description:string
-npx sequelize-cli model:generate --name Permission --attributes id:UUID,name:string,description:string
-npx sequelize-cli model:generate --name PasswordResetToken --attributes id:UUID,token:string,createdAt:date,expiresAt:date,ipAddress:string,userAgent:string
-npx sequelize-cli model:generate --name EmailVerificationToken --attributes id:UUID,token:string,createdAt:date,expiresAt:date
-npx sequelize-cli model:generate --name LoginAttempt --attributes id:UUID,timestamp:date,ipAddress:string,userAgent:string,successful:boolean
-npx sequelize-cli model:generate --name AuthenticationProvider --attributes id:UUID,providerName:string,providerUserID:string,accessToken:string
-
+npx sequelize-cli model:generate --name User --attributes id:UUID,username:string,email:string,passwordHash:string,firstName:string,lastName:string,phone:string,address:string,lastLogin:date,status:string,salt:string 
+npx sequelize-cli model:generate --name Role --attributes id:UUID,name:string,description:string 
+npx sequelize-cli model:generate --name Permission --attributes id:UUID,name:string,description:string 
+npx sequelize-cli model:generate --name PasswordResetToken --attributes id:UUID,token:string,ipAddress:string,userAgent:string 
+npx sequelize-cli model:generate --name EmailVerificationToken --attributes id:UUID,token:string,expiresAt:date 
+npx sequelize-cli model:generate --name LoginAttempt --attributes id:UUID,timestamp:date,ipAddress:string,userAgent:string,successful:boolean 
+npx sequelize-cli model:generate --name AuthenticationProvider --attributes id:UUID,providerName:string,providerUserID:string,accessToken:string 
 
 
 
