@@ -1,7 +1,6 @@
-// [One-To-One]            => [hasOne &  belongsTo] 
-// [One-To-Many]           => [hasMany &  belongsTo]
-// [Many-To-Many]          => [belongsToMany & belongsToMany ]
-
+    // [One-To-One]            => [hasOne &  belongsTo]
+    // [One-To-Many]           => [hasMany &  belongsTo]
+    // [Many-To-Many]          => [belongsToMany & belongsToMany ]
 
 // Common Options for All Associations:
 
@@ -16,4 +15,3 @@
     // [through]            :(required for belongsToMany): Specifies the join table model or name used for the many-to-many relationship.
     // [scope]              :(function, optional): Sets a custom scope (filter) to be applied to queries for the association.
     // [uniqueKey]          :(optional, belongsToMany): Defines the name of the unique constraint for the foreign keys in the join table (ensures a record only appears once for each model).
-
