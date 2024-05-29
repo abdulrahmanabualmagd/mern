@@ -1,0 +1,37 @@
+// Create
+    01. create(values, options)             : Creates a single instance of the model and saves it to the database.
+    02. bulkCreate(records, options)        : Creates multiple instances of the model and saves them to the database.
+
+// Read
+    03. findByPk(primaryKey, options)       : Finds a single instance by its primary key.
+    04. findOne(options)                    : Finds the first instance that matches the specified query options.
+    05. findAll(options)                    : Finds all instances that match the specified query options.
+    06. findOrCreate(options)               : Finds the first instance that matches the specified query options or creates a new instance if none are found.
+    07. findAndCountAll(options)            : Finds all instances and counts the total number of records matching the specified query options.
+    08. count(options)                      : Counts the number of records that match the specified query options.
+    09. max(field, options)                 : Finds the maximum value of a specified field.
+    10. min(field, options)                 : Finds the minimum value of a specified field.
+    11. sum(field, options)                 : Sums the values of a specified field.
+
+// Update
+    12. update(values, options)             : Updates multiple instances that match the specified query options with the given values.
+
+// Delete
+    13. destroy(options)                    : Deletes multiple instances that match the specified query options.
+    14. truncate(options)                   : Deletes all records in the table, optionally resetting the auto-incrementing primary key.
+
+// Other Utility Methods (operating on individual records)
+    15. save(options)                       : Saves the instance to the database, either creating it or updating it.
+    16. update(values, options)             : Updates the instance with the specified values.
+    17. destroy(options)                    : Deletes the instance from the database.
+    18. reload(options)                     : Reloads the instance with the latest data from the database.
+    19. increment(fields, options)          : Increments the specified fields.
+    20. decrement(fields, options)          : Decrements the specified fields.
+    21. restore(options)                    : Restores a previously soft-deleted instance.
+
+// Association Methods (managing associations between models)
+    22. setAssociations()                   : Sets the associations for the model.
+    23. addAssociation()                    : Adds an association to the model.
+    24. removeAssociation()                 : Removes an association from the model.
+    25. hasAssociation()                    : Checks if the model has an association.
+    26. countAssociations()                 : Counts the associations of the model.
