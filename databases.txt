@@ -1,0 +1,26 @@
+### SQL Databases           
+
+    1. Structure            : Follows a rigid, predefined schema with tables, rows, and columns.
+    2. Schema               : Enforces a fixed structure for data storage.
+    3. Relationships        : Supports complex relationships through foreign keys.
+    4. Transactions         : ACID (Atomicity, Consistency, Isolation, Durability) compliant transactions ensure data integrity.
+    5. Scalability          : Vertical scaling is common, with limits on scaling horizontally.
+    6. Performance          : High performance for complex queries and transactions.
+    7. Data Integrity       : Strong data consistency and integrity through enforced schema and constraints.
+    8. Flexibility          : Limited flexibility due to strict schema requirements.
+    9. Use Cases            : Suitable for applications with structured data and complex relationships, such as banking systems and enterprise applications.
+    10. Examples            : MySQL, PostgreSQL, SQL Server, Oracle.
+
+### NoSQL Databases        
+
+    1. Structure            : Flexible schema-less structure allows for dynamic and evolving data models.
+    2. Schema               : No fixed schema; each document can have a different structure within the same collection.
+    3. Relationships        : Supports denormalization and embedding to represent relationships between data.
+    4. Transactions         : Limited or eventual consistency; eventual consistency models tradeoff consistency for scalability.
+    5. Scalability          : Designed for horizontal scaling, making it easier to handle large volumes of data.
+    6. Performance          : High performance for read and write operations, especially at scale.
+    7. Data Integrity       : Eventual consistency may lead to eventual data consistency rather than immediate consistency.
+    8. Flexibility          : Highly flexible with dynamic schema and support for unstructured and semi-structured data.
+    9. Use Cases            : Suitable for applications with rapidly changing or unstructured data, such as social media platforms, IoT, and real-time analytics.
+    10. Examples            : MongoDB, Cassandra, Couchbase, Redis.
+

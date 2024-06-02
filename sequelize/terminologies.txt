@@ -1,0 +1,25 @@
+### SQL Database Terminology  
+
+    1. Database               : A structured collection of data.
+    2. Table                  : A structured representation of data consisting of rows and columns.
+    3. Row                    : A single record in a table.
+    4. Column                 : A single field or attribute in a table.
+    5. Primary Key            : A unique identifier for each row in a table.
+    6. Foreign Key            : A column or set of columns that establishes a relationship between two tables.
+    7. Index                  : A data structure that improves the speed of data retrieval operations on a table.
+    8. Query                  : A request to retrieve, insert, update, or delete data from a table based on specified criteria.
+    9. Join                   : A SQL operation used to combine rows from two or more tables based on a related column between them.
+    10. Transaction           : A sequence of one or more SQL operations treated as a single unit of work.
+
+### Sequelize Terminology     
+
+    1. Model                  : A JavaScript representation of a database table. 
+    2. Schema                 : A blueprint that defines the structure of a model.
+    3. Migration              : JavaScript files that describe changes to be made to the database schema.
+    4. Association            : A relationship between two Sequelize models.
+    5. Query Interface        : Methods provided by Sequelize for interacting with models and performing CRUD operations.
+    6. Hooks                  : Functions that are called before or after certain operations on a model (e.g., create, update).
+    7. Validation             : Rules defined within a model to ensure data integrity.
+    8. Instance               : An individual record retrieved from the database using Sequelize.
+    9. Connection             : An instance of the Sequelize connection to a SQL database.
+    10. Association Types     : Different types of relationships between models, such as one-to-one, one-to-many, and many-to-many.
