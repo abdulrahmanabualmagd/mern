@@ -1,0 +1,143 @@
+----------------------------------------------- [ Terminologies ] -----------------------------------------------
+
+### MongoDB Terminology       
+
+    1. Database               : A container for collections.
+    2. Collection             : A group of MongoDB documents. Equivalent to a table in relational databases.
+    3. Document               : A single record or data entity within a collection. Represented as a JSON-like object.
+    4. Field                  : A key-value pair within a document.
+    5. Index                  : A data structure that improves the speed of data retrieval operations on a collection.
+    6. Query                  : A request to retrieve data from a collection based on specified criteria.
+    7. Aggregation            : A framework for performing data manipulation operations on documents in a collection.
+    8. Replica Set            : A group of MongoDB servers that maintain the same data set, providing high availability and redundancy.
+    9. Sharding               : Horizontal partitioning of data across multiple MongoDB instances to improve scalability.
+    10. GridFS                : A specification for storing and retrieving large files in MongoDB.
+
+
+### Mongoose Terminology      
+
+    1. Schema                 : A blueprint that defines the structure of documents within a collection.
+    2. Model                  : A constructor compiled from a schema. Represents a collection in MongoDB.
+    3. Middleware             : Functions that execute before or after certain operations (e.g., save, validate) on a model.
+    4. Validation             : Rules defined within a schema to enforce data integrity.
+    5. Population             : The process of automatically replacing specified paths in a document with documents from other collections.
+    6. Plugin                 : Reusable pieces of code that add functionality to Mongoose schemas.
+    7. Connection             : An instance of the Mongoose connection to a MongoDB database.
+    8. Query                  : A method provided by Mongoose to retrieve documents from a collection based on specified criteria.
+    9. Document               : An instance of a model representing a single MongoDB document.
+    10. Virtuals              : Additional fields for a document that are not stored in the database but computed on access.
+
+
+----------------------------------------------- [ Mongoose Methods ] -----------------------------------------------
+
+    ### Connection
+        1. mongoose.connect(uri, options)                                                   - Connects to a MongoDB database.
+        2. mongoose.disconnect()                                                            - Disconnects from the MongoDB database.
+        3. mongoose.connection                                                              - Provides access to the current database connection.
+
+    ### Schema
+        1. new mongoose.Schema(definition, options)                                         - Creates a new schema with a given definition and options.
+        2. schema.add(obj)                                                                  - Adds paths or properties to the existing schema.
+        3. schema.methods                                                                   - Defines instance methods for documents.
+        4. schema.statics                                                                   - Defines static methods for the model.
+        5. schema.virtual(name)                                                             - Creates a virtual property on the schema.
+        6. schema.path(path)                                                                - Gets/sets schema paths.
+        7. schema.index(fields, options)                                                    - Defines indexes on the schema.
+
+    ### Model
+        1. mongoose.model(name, schema, collection)                                         - Compiles a model from a schema and binds it to a collection.
+        2. Model.find(conditions, [projection], [options], [callback])                      - Finds documents that match the conditions.
+        3. Model.findById(id, [projection], [options], [callback])                          - Finds a document by its ID.
+        4. Model.findOne(conditions, [projection], [options], [callback])                   - Finds one document that matches the conditions.
+        5. Model.create(docs, [callback])                                                   - Creates and saves one or more documents.
+        6. Model.updateOne(conditions, update, [options], [callback])                       - Updates a single document that matches the conditions.
+        7. Model.updateMany(conditions, update, [options], [callback])                      - Updates multiple documents that match the conditions.
+        8. Model.deleteOne(conditions, [options], [callback])                               - Deletes a single document that matches the conditions.
+        9. Model.deleteMany(conditions, [options], [callback])                              - Deletes multiple documents that match the conditions.
+        10. Model.findByIdAndUpdate(id, update, [options], [callback])                      - Finds a document by ID and updates it.
+        11. Model.findByIdAndDelete(id, [options], [callback])                              - Finds a document by ID and deletes it.
+        12. Model.findOneAndUpdate(conditions, update, [options], [callback])               - Finds one document and updates it.
+        13. Model.findOneAndDelete(conditions, [options], [callback])                       - Finds one document and deletes it.
+        14. Model.countDocuments(conditions, [callback])                                    - Counts documents that match the conditions.
+        15. Model.distinct(field, [conditions], [callback])                                 - Finds distinct values for a specified field.
+        16. Model.aggregate(pipeline, [options], [callback])                                - Performs aggregation operations on the documents.
+
+    ### Document
+        1. doc.save([options], [callback])                                                  - Saves the document to the database.
+        2. doc.remove([callback])                                                           - Removes the document from the database.
+        3. doc.updateOne(update, [options], [callback])                                     - Updates the document with the specified changes.
+        4. doc.validate([callback])                                                         - Validates the document against the schema.
+        5. doc.toObject([options])                                                          - Converts the document to a plain JavaScript object.
+        6. doc.toJSON([options])                                                            - Converts the document to a JSON object.
+        7. doc.populate(path, [callback])                                                   - Populates referenced paths in the document.
+        8. doc.depopulate([path])                                                           - Depopulates specified paths in the document.
+        9. doc.increment()                                                                  - Increments version numbers for the document.
+
+    ### Query
+        1. query.exec([callback])                                                           - Executes the query.
+        2. query.then(onFulfilled, onRejected)                                              - Attaches fulfillment and rejection handlers to the query.
+        3. query.catch(onRejected)                                                          - Attaches a rejection handler to the query.
+        4. query.where(path, [val])                                                         - Specifies conditions for the query.
+        5. query.equals(val)                                                                - Specifies an equality condition.
+        6. query.or(array)                                                                  - Specifies an OR condition for multiple queries.
+        7. query.and(array)                                                                 - Specifies an AND condition for multiple queries.
+        8. query.lt(val)                                                                    - Specifies a less                                                                                                   -than condition.
+        9. query.lte(val)                                                                   - Specifies a less                                                                                                   -than                                                                                                   -or                                                                                                   -equal condition.
+        10. query.gt(val)                                                                   - Specifies a greater                                                                                                   -than condition.
+        11. query.gte(val)                                                                  - Specifies a greater                                                                                                   -than                                                                                                   -or                                                                                                   -equal condition.
+        12. query.ne(val)                                                                   - Specifies a not                                                                                                   -equal condition.
+        13. query.in(array)                                                                 - Specifies an IN condition.
+        14. query.nin(array)                                                                - Specifies a NOT IN condition.
+        15. query.exists([val])                                                             - Specifies an exists condition.
+        16. query.regex(val)                                                                - Specifies a regular expression condition.
+        17. query.limit(val)                                                                - Limits the number of documents returned.
+        18. query.skip(val)                                                                 - Skips the specified number of documents.
+        19. query.sort(arg)                                                                 - Sorts the documents by the specified fields.
+        20. query.select(fields)                                                            - Specifies fields to include or exclude in the results.
+        21. query.populate(path, [select], [model], [match], [options], [callback])         - Populates referenced paths.
+
+    ### Middleware (Hooks)
+        1. schema.pre(event, [options], function(next))                                     - Defines a pre                                                                                                   -hook for a schema event.
+        2. schema.post(event, function(doc, next))                                          - Defines a post                                                                                                   -hook for a schema event.
+
+    ### Utility Methods
+        1. mongoose.Types.ObjectId()                                                        - Creates a new ObjectId.
+        2. mongoose.Schema.Types                                                            - Accesses built                                                                                                   -in schema types.
+        3. mongoose.SchemaType                                                              - Base schema type.
+
+
+
+
+----------------------------------------------- [ Options ] -----------------------------------------------
+### Connection
+    01. dbName                  : Specifies the name of the MongoDB database to use.
+    02. user                    : Specifies the username for authentication.
+    03. pass                    : Specifies the password for authentication.
+    04. auth                    : An object specifying the authentication options. This could include authSource, authMechanism, etc.
+    05. poolSize                : Specifies the maximum number of connections in the connection pool.
+    06. ssl                     : Specifies whether to use SSL to connect to the MongoDB server.
+    07. sslValidate             : Specifies whether to validate the MongoDB server certificate against the configured CA certificates.
+    08. sslCA                   : An array of strings or buffers of CA certificates.
+    09. sslCert                 : A string or buffer containing the client certificate.
+    10. sslKey                  : A string or buffer containing the client certificate private key.
+    11. sslPass                 : A string or buffer containing the password to decrypt the client certificate private key.
+    12. sslCRL                  : A string or buffer containing the Certificate Revocation List.
+    13. sslServerName           : Specifies the server name for the SNI (Server Name Indication) TLS extension.
+    14. autoReconnect           : Specifies whether to automatically reconnect if the connection is lost.
+    15. reconnectTries          : Specifies the number of times to try reconnecting.
+    16. reconnectInterval       : Specifies the number of milliseconds to wait between connection attempts.
+    17. bufferCommands          : Specifies whether to buffer commands or send them directly to MongoDB.
+    18. bufferMaxEntries        : Specifies the maximum number of commands to buffer when bufferCommands is true.
+    19. keepAlive               : Specifies whether to enable TCP KeepAlive.
+    20. keepAliveInitialDelay   : Specifies the initial delay in milliseconds before the first keepAlive probe is sent on an idle socket.
+    21. family                  : Specifies the IP address family to use (4 for IPv4, 6 for IPv6).
+    22. socketTimeoutMS         : Specifies how long the MongoDB driver will wait before terminating a socket connection.
+    23. connectTimeoutMS        : Specifies how long the MongoDB driver will wait before timing out a connection attempt.
+    24. useNewUrlParser         : Specifies whether to use the new URL parser.
+    25. useUnifiedTopology      : Specifies whether to use the new Server Discovery and Monitoring engine.
+    26. appname                 : Specifies the application name for the connection pool.
+    27. loggerLevel             : Specifies the level of verbosity for logging.
+    28. logger                  : Specifies a custom logger object.
+    29. promiseLibrary          : Specifies a custom Promise library.
+    30. driverInfo              : Specifies information about the driver.
+    31. validateOptions         : Specifies whether to validate the connection options.
