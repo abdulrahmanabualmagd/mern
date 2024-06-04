@@ -30,7 +30,12 @@ async function run() {
     // Connect Database
     await connectDB();
 
+    // We can use
+
     try {
+        // Create underlying collection
+        await User.createCollection();
+
         // 2- Create and save documents
         await User.create([
             { name: "John Doe", email: "john@example.com", age: 25, country: "USA" },

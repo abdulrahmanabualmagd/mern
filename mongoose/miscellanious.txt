@@ -53,7 +53,7 @@
         6. Model.updateOne(conditions, update, [options], [callback])                       - Updates a single document that matches the conditions.
         7. Model.updateMany(conditions, update, [options], [callback])                      - Updates multiple documents that match the conditions.
         8. Model.deleteOne(conditions, [options], [callback])                               - Deletes a single document that matches the conditions.
-        9. Model.deleteMany(conditions, [options], [callback])                              - Deletes multiple documents that match the conditions.
+        9. Model.deleteMany(conditio    ns, [options], [callback])                              - Deletes multiple documents that match the conditions.
         10. Model.findByIdAndUpdate(id, update, [options], [callback])                      - Finds a document by ID and updates it.
         11. Model.findByIdAndDelete(id, [options], [callback])                              - Finds a document by ID and deletes it.
         12. Model.findOneAndUpdate(conditions, update, [options], [callback])               - Finds one document and updates it.
