@@ -1,0 +1,56 @@
+### Database Commands
+   - show dbs                                                      : Lists all databases.
+   - use <database>                                                : Switches to the specified database.
+   - show collections                                              : Lists all collections in the current database.
+
+### Collection Commands
+   - db.createCollection("<collection>")                           : Creates a new collection.
+   - db.<collection>.drop()                                        : Drops the specified collection.
+   - db.<collection>.renameCollection("<newName>")                 : Renames the collection.
+
+#### Insert
+   - db.<collection>.insertOne(<document>)                         : Inserts a single document.
+   - db.<collection>.insertMany([<document1>, <document2>, ...])   : Inserts multiple documents.
+
+#### Find
+   - db.<collection>.find()                                        : Finds all documents.
+   - db.<collection>.find(<criteria>)                              : Finds documents matching the criteria.
+   - db.<collection>.findOne(<criteria>)                           : Finds a single document matching the criteria.
+   - db.<collection>.find(<criteria>, {<projection>})              : Finds documents with specified fields.
+
+#### Update
+    - db.<collection>.updateOne(<criteria>, <update>)              : Updates a single document.
+    - db.<collection>.updateMany(<criteria>, <update>)             : Updates multiple documents.
+    - db.<collection>.replaceOne(<criteria>, <replacement>)        : Replaces a single document.
+
+#### Delete
+    - db.<collection>.deleteOne(<criteria>)                        : Deletes a single document.
+    - db.<collection>.deleteMany(<criteria>)                       : Deletes multiple documents.
+
+### Index Commands
+    - db.<collection>.createIndex({<field> : <order>})             : Creates an index on the specified field.
+    - db.<collection>.getIndexes()                                 : Lists all indexes on the collection.
+    - db.<collection>.dropIndex("<indexName>")                     : Drops the specified index.
+
+### Aggregation Commands
+    - db.<collection>.aggregate([<stage1>, <stage2>, ...])         : Runs an aggregation pipeline.
+
+### Administrative Commands
+    - db.serverStatus()                                            : Provides an overview of the server status.
+    - db.stats()                                                   : Provides statistics about the current database.
+    - db.<collection>.stats()                                      : Provides statistics about the specified collection.
+    - db.currentOp()                                               : Shows currently running operations on the database.
+
+### User Management Commands
+    - db.createUser({<userDetails>})                               : Creates a new user.
+    - db.dropUser("<username>")                                    : Drops the specified user.
+    - db.grantRolesToUser("<username>", [<roles>])                 : Grants roles to a user.
+    - db.revokeRolesFromUser("<username>", [<roles>])              : Revokes roles from a user.
+
+### Backup and Restore Commands
+    - mongodump --db <database> --out <directory>                  : Backs up the specified database.
+    - mongorestore --db <database> <directory>                     : Restores the specified database.
+
+### Miscellaneous Commands
+    - show roles                                                   : Lists all roles in the current database.
+    - show users                                                   : Lists all users in the current database.
