@@ -2,30 +2,30 @@
 
 ### MongoDB Terminology       
 
-    1. Database               : A container for collections.
-    2. Collection             : A group of MongoDB documents. Equivalent to a table in relational databases.
-    3. Document               : A single record or data entity within a collection. Represented as a JSON-like object.
-    4. Field                  : A key-value pair within a document.
-    5. Index                  : A data structure that improves the speed of data retrieval operations on a collection.
-    6. Query                  : A request to retrieve data from a collection based on specified criteria.
-    7. Aggregation            : A framework for performing data manipulation operations on documents in a collection.
-    8. Replica Set            : A group of MongoDB servers that maintain the same data set, providing high availability and redundancy.
-    9. Sharding               : Horizontal partitioning of data across multiple MongoDB instances to improve scalability.
-    10. GridFS                : A specification for storing and retrieving large files in MongoDB.
+    01. Database               : A container for collections.
+    02. Collection             : A group of MongoDB documents. Equivalent to a table in relational databases.
+    03. Document               : A single record or data entity within a collection. Represented as a JSON-like object.
+    04. Field                  : A key-value pair within a document.
+    05. Index                  : A data structure that improves the speed of data retrieval operations on a collection.
+    06. Query                  : A request to retrieve data from a collection based on specified criteria.
+    07. Aggregation            : A framework for performing data manipulation operations on documents in a collection.
+    08. Replica Set            : A group of MongoDB servers that maintain the same data set, providing high availability and redundancy.
+    09. Sharding               : Horizontal partitioning of data across multiple MongoDB instances to improve scalability.
+    10. GridFS                 : A specification for storing and retrieving large files in MongoDB.
 
 
 ### Mongoose Terminology      
 
-    1. Schema                 : A blueprint that defines the structure of documents within a collection.
-    2. Model                  : A constructor compiled from a schema. Represents a collection in MongoDB.
-    3. Middleware             : Functions that execute before or after certain operations (e.g., save, validate) on a model.
-    4. Validation             : Rules defined within a schema to enforce data integrity.
-    5. Population             : The process of automatically replacing specified paths in a document with documents from other collections.
-    6. Plugin                 : Reusable pieces of code that add functionality to Mongoose schemas.
-    7. Connection             : An instance of the Mongoose connection to a MongoDB database.
-    8. Query                  : A method provided by Mongoose to retrieve documents from a collection based on specified criteria.
-    9. Document               : An instance of a model representing a single MongoDB document.
-    10. Virtuals              : Additional fields for a document that are not stored in the database but computed on access.
+    01. Schema                 : A blueprint that defines the structure of documents within a collection.
+    02. Model                  : A constructor compiled from a schema. Represents a collection in MongoDB.
+    03. Middleware             : Functions that execute before or after certain operations (e.g., save, validate) on a model.
+    04. Validation             : Rules defined within a schema to enforce data integrity.
+    05. Population             : The process of automatically replacing specified paths in a document with documents from other collections.
+    06. Plugin                 : Reusable pieces of code that add functionality to Mongoose schemas.
+    07. Connection             : An instance of the Mongoose connection to a MongoDB database.
+    08. Query                  : A method provided by Mongoose to retrieve documents from a collection based on specified criteria.
+    09. Document               : An instance of a model representing a single MongoDB document.
+    10. Virtuals               : Additional fields for a document that are not stored in the database but computed on access.
 
 
 ----------------------------------------------- [ Mongoose Methods ] -----------------------------------------------
@@ -107,8 +107,8 @@
 
 
 
-
 ----------------------------------------------- [ Options ] -----------------------------------------------
+
 ### Connection
     01. dbName                  : Specifies the name of the MongoDB database to use.
     02. user                    : Specifies the username for authentication.
@@ -141,3 +141,19 @@
     29. promiseLibrary          : Specifies a custom Promise library.
     30. driverInfo              : Specifies information about the driver.
     31. validateOptions         : Specifies whether to validate the connection options.
+
+
+
+----------------------------------------------- [ Built-In Validators ] -----------------------------------------------
+
+    - [Required]                    : Ensures that a value is provided.
+    - [Unique]                      : Ensures that each value is unique in the collection.
+    - [Min]        (for Numbers)    : Ensures that a number is greater than or equal to a specified value.
+    - [Max]        (for Numbers)    : Ensures that a number is less than or equal to a specified value.
+    - [MinLength]  (for Strings)    : Ensures that a string's length is greater than or equal to a specified value.
+    - [MaxLength]  (for Strings)    : Ensures that a string's length is less than or equal to a specified value.
+    - [Match]      (for Strings)    : Ensures that a string matches a specified regular expression.
+    - [Enum]                        : Ensures that a value is from a specified list of allowed values.
+    - [Default]                     : Sets a default value if none is provided.
+    - [Immutable]                   : Ensures that a field's value cannot be changed once set.
+    - [Custom]                      : Validator: Allows for defining custom validation logic.
