@@ -1,0 +1,12 @@
+Mongoose Built-In Validators & Constraints
+    - [Required]                    : Ensures that a value is provided.
+    - [Unique]                      : Ensures that each value is unique in the collection.
+    - [Min]        (for Numbers)    : Ensures that a number is greater than or equal to a specified value.
+    - [Max]        (for Numbers)    : Ensures that a number is less than or equal to a specified value.
+    - [MinLength]  (for Strings)    : Ensures that a string's length is greater than or equal to a specified value.
+    - [MaxLength]  (for Strings)    : Ensures that a string's length is less than or equal to a specified value.
+    - [Match]      (for Strings)    : Ensures that a string matches a specified regular expression.
+    - [Enum]                        : Ensures that a value is from a specified list of allowed values.
+    - [Default]                     : Sets a default value if none is provided.
+    - [Immutable]                   : Ensures that a field's value cannot be changed once set.
+    - [Custom]                      : Validator: Allows for defining custom validation logic.
