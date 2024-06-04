@@ -1,0 +1,5 @@
+/*
+    - bulkWrite
+    - createCollection
+    - insertMany
+*/
