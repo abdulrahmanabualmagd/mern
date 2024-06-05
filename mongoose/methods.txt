@@ -1,0 +1,42 @@
+// Create
+    01. create(doc, options)                        : Creates a single instance of the model and saves it to the database.
+    02. insertMany(docs, options)                   : Creates multiple instances of the model and saves them to the database.
+
+// Read
+    03. findById(id, options)                       : Finds a single instance by its primary key (alias for `findOne` with `_id`).
+    04. findOne(filter, options)                    : Finds the first instance that matches the specified query filter.
+    05. find(filter, options)                       : Finds all instances that match the specified query filter.
+    06. findByIdAndUpdate(id, update, options)      : Finds a single instance by its primary key and updates it.
+    07. findOneAndUpdate(filter, update, options)   : Finds a single instance that matches the filter and updates it.
+    08. countDocuments(filter, options)             : Counts the number of documents that match the filter.
+    09. estimatedDocumentCount(options)             : Estimates the document count in the collection.
+
+// Update
+    10. updateOne(filter, update, options)          : Updates a single instance that matches the specified query filter.
+    11. updateMany(filter, update, options)         : Updates multiple instances that match the specified query filter.
+    12. replaceOne(filter, replacement, options)    : Replaces a single instance that matches the filter.
+
+// Delete
+    13. deleteOne(filter, options)                  : Deletes a single instance that matches the specified query filter.
+    14. deleteMany(filter, options)                 : Deletes multiple instances that match the specified query filter.
+    15. findByIdAndDelete(id, options)              : Finds a single instance by its primary key and deletes it.
+    16. findOneAndDelete(filter, options)           : Finds a single instance that matches the filter and deletes it.
+
+// Utility
+    20. save(options)                               : Saves the document.
+    21. distinct(field, filter, options)            : Finds the distinct values for a specified field across a single collection or view.
+    22. aggregate(pipeline, options)                : Performs aggregation operations on the model's collection.
+    23. populate(docs, options)                     : Populates references in the document(s).
+    24. lean(options)                               : Converts the document into a plain JavaScript object.
+    25. count(filter, options)                      : Counts the number of documents that match the filter.
+    26. validate(callback)                          : Validates the document.
+    27. validateSync()                              : Synchronously validates the document.
+    28. exec(callback)                              : Executes the query and returns the results.
+    29. $where(argument)                            : Specifies a JavaScript expression or function to use as a query filter.
+    30. geoSearch(filter, options)                  : Performs a geospatial query on the model's collection.
+    31. hydrate(obj)                                : Converts a plain JavaScript object into a Mongoose document.
+    32. mapReduce(o, callback)                      : Performs map-reduce operations on the model's collection.
+    33. model(name, schema)                         : Creates or retrieves a model.
+    34. schema.add(obj)                             : Adds key schema properties.
+    35. schema.path(path)                           : Retrieves or sets a schema path.
+    36. schema.indexes()                            : Retrieves the indexes defined on this schema.
