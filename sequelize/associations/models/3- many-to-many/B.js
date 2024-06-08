@@ -32,5 +32,5 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
-    return RolePermission;
+    return B;
 };

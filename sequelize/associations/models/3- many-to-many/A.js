@@ -28,9 +28,9 @@ module.exports = (sequelize, DataTypes) => {
         {
             // Other Options
             sequelize,
-            modelName: "A",
+            modelName: "A", 
         }
     );
 
-    return RolePermission;
+    return A;
 };

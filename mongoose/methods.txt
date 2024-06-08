@@ -22,7 +22,7 @@
     15. findByIdAndDelete(id, options)              : Finds a single instance by its primary key and deletes it.
     16. findOneAndDelete(filter, options)           : Finds a single instance that matches the filter and deletes it.
 
-// Utility
+// Utility  // repeated methods with different name are aliases like (count & countDocuments)
     20. save(options)                               : Saves the document.
     21. distinct(field, filter, options)            : Finds the distinct values for a specified field across a single collection or view.
     22. aggregate(pipeline, options)                : Performs aggregation operations on the model's collection.

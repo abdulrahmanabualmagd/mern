@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         {
             sequelize,
-            modelName: "RolePermissions",
+            modelName: "junctionAB",
             primaryKey: ["A_ID", "B_ID"],
         }
     );
