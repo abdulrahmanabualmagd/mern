@@ -1,5 +1,5 @@
 module.exports = (mongoose) => {
-    const B_Shcema = new mongoose.Schema(
+    const Junction_ABShcema = new mongoose.Schema(
         {
             A_ID: {
                 type: mongoose.Schema.Types.ObjectId,
@@ -15,6 +15,6 @@ module.exports = (mongoose) => {
         }
     );
 
-    const B = mongoose.model("B", B_Shcema);
-    return B;
+    const Junction_AB = mongoose.model("Junction_AB", Junction_ABShcema);
+    return Junction_AB;
 };
