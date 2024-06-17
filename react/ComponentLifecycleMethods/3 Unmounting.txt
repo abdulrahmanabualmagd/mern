@@ -1,0 +1,4 @@
+---------------------------------------------- [ Unmounting ] ----------------------------------------------
+
+componentWillUnmount()
+    - Called right before the component is unmounted and destroyed. Used for cleaning up resources (e.g., timers, subscriptions).

@@ -1,0 +1,15 @@
+---------------------------------------------- [ Mounting ] ----------------------------------------------
+constructor(props)
+    - Called before the component is mounted. Used for initializing state and binding methods.
+
+
+static getDerivedStateFromProps(props, state)
+    - Called right before rendering the element(s) in the DOM. Used to update the state based on initial props.
+
+
+render()
+    - Required method. Called to render the component’s JSX.
+
+
+componentDidMount()
+    - Called after the component has been mounted. Used for performing side effects like fetching data or setting up subscriptions.

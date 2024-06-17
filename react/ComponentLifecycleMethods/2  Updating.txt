@@ -1,0 +1,20 @@
+---------------------------------------------- [ Updating ] ----------------------------------------------
+
+staticgetDerivedStateFromProps(props, state)
+    - Called right before rendering the element(s) in the DOM when new props or state are received.
+
+
+shouldComponentUpdate(nextProps, nextState)
+    - Called before rendering when new props or state are being received. Used to decide whether the component should re-render. Returning false prevents the update.
+
+
+render()
+    - Called to render the component’s JSX.
+
+
+getSnapshotBeforeUpdate(prevProps, prevState)
+    - Called right before the most recently rendered output is committed to the DOM. Used to capture information (e.g., scroll position) that can be used after the update.
+
+
+componentDidUpdate(prevProps, prevState, snapshot)
+    - Called after the component’s updates are flushed to the DOM. Used for performing side effects after the update. The snapshot value returned by getSnapshotBeforeUpdate is passed to this method.

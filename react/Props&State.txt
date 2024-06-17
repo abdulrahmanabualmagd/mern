@@ -1,0 +1,34 @@
+Props   
+    - Properites are used to pass data from one component to another
+    - They are immutable and read-only within the component that receives them
+    - Properties are typically used to configure a component with data or settings provided by its parent comopnent
+
+PropTypes 
+    - is a type-checking library in React used to validate the types of propes passed to components. This helps catch bugs and ensures that components receive th correct data types
+    - PropTypes can specify what types of props a component should receive, and if a prop of a different type is passed, a warning is logged in the console
+    - PropTypes.[string | number | bool | array | object | func | node (anything that can be rendered: numbers, strings, elements, or an array of these types) | element (a React element)]
+    - PropTypes.[instanceOf(ClassName) | oneOf(['Value1', 'Value2']) | oneOfType([PropTypes.string, PropTypes.number]) | arrayOf(PropTypes.number)objectOf(PropTypes.number) | shape({}) | exact({})]
+
+State
+    - Used to manage data that changes over time witthin a component Unlike props
+    - State is mutable and can be changed by the component itself
+    - State is typically used for data that needs to be cynamic and change in response to user actions or other events
+
+const [state, setState] = useState(initialState);
+    - state:            the current state Value
+    - setState:         function to update the state
+    - initialState:     the initial state value
+    $ <button onClick={() => setCount(prevCount => prevCount + 1)}>Increment</button>
+
+const [state, dispatch] = useReducer(reducer, initialState);
+    - state:            The current state value.
+    - dispatch:         Function to dispatch actions to update the state.
+    - reducer:          A reducer function that takes the current state and an action, and returns the new state.
+    - initialState:     The initial state value.
+
+useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, []); // Empty dependency array means this effect runs once after the initial render
+ 

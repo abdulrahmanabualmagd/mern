@@ -1,0 +1,15 @@
+Component lifecycle methods in react are special methods that are special methods that are invoked
+at different stages of a components's existence
+
+these methods allow you to hook into specific points of the component's lifecycle to run code such as
+fethcing data, cleaning up resources, or updating the DOM
+
+Lifecycle methods in class components are divided into three phases
+    1. Mounting
+        - These methods are called when an instance of a component is being created and inserted into the DOM
+    2. Updating
+        - These methods are called when a comopnent is being re-rendered as a result of changes to props or state
+    3. Unmounting
+        - These methods are called when a component is being removed from the DOM
+        
+
