@@ -1,0 +1,10 @@
+Props   
+    - Properites are used to pass data from one component(parent) to another(child)
+    - They are immutable and read-only within the component that receives them
+    - Properties are typically used to configure a component with data or settings provided by its parent comopnent
+
+PropTypes 
+    - is a type-checking library in React used to validate the types of propes passed to components. This helps catch bugs and ensures that components receive th correct data types
+    - PropTypes can specify what types of props a component should receive, and if a prop of a different type is passed, a warning is logged in the console
+    - PropTypes.[string | number | bool | array | object | func | node (anything that can be rendered: numbers, strings, elements, or an array of these types) | element (a React element)]
+    - PropTypes.[instanceOf(ClassName) | oneOf(['Value1', 'Value2']) | oneOfType([PropTypes.string, PropTypes.number]) | arrayOf(PropTypes.number)objectOf(PropTypes.number) | shape({}) | exact({})]

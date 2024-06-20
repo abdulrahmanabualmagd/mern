@@ -1,0 +1,6 @@
+export default function List(){
+    const fruits = ["apple", "orange", "banana", "coconut" ]
+    const listItems = fruits.map(fruit => <li>fruit</li>)
+    return (<ul>{listItems}</ul>)
+}
+

@@ -1,0 +1,8 @@
+External 
+    // Import External css style 
+
+Internal
+    // Create object contain all css styles
+
+Module
+    // create file.module.css and import it as object and use its inner css classes
