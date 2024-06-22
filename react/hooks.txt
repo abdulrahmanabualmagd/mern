@@ -1,3 +1,8 @@
+useState, useReducer
+useContext
+useRef
+useEffect
+useMemo, useCallback
 
 State
     - Used to manage data that changes over time witthin a component Unlike props

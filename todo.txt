@@ -2,3 +2,5 @@ node buit-in Events like: process.on('exit', function() {//do something before e
 node Custom Events
 
 create model using sequelize-cli and to generate model and migration file, add constraints and create migration for these constraints
+
+suspense | portal | error boundaries in react
